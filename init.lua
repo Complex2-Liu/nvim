@@ -2,5 +2,7 @@
 vim.g.mapleader = " "
 
 require("plugins")
+require("settings").setup()
+
 -- Enable colorscheme at the very end
 require("colorscheme").setup()
