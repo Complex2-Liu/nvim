@@ -13,6 +13,9 @@ return require('packer').startup(function(use)
   -- packer can manager itself
   use {"wbthomason/packer.nvim"}
 
+  -- colorscheme
+  use {"projekt0n/github-nvim-theme"}
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if packer_bootstrap then
