@@ -9,6 +9,11 @@ M.options = {
   cursorline = true, -- highlight the current line
   termguicolors = true, -- enable gui color (24-bit RGB) in your terminal (some terminal doesn't support this, like macos default terminal)
 
+  -- see `:help title`
+  title = true,
+  titlestring = "Editor -- Neovim",
+  titleold = "Terminal",
+
   -- convert tabs to space
   -- insert 2 spaces for each indentation
   -- one tab occupies 2 spaces
