@@ -13,6 +13,13 @@ return require('packer').startup(function(use)
   -- packer can manager itself
   use {"wbthomason/packer.nvim"}
 
+  -- File Explorer
+  use {
+    "kyazdani42/nvim-tree.lua",
+    requires = "kyazdani42/nvim-web-devicons",
+    config = function() require("core.file-explorer").setup() end
+  }
+
   -- colorscheme
   use {"projekt0n/github-nvim-theme"}
 
