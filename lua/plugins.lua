@@ -20,6 +20,12 @@ return require('packer').startup(function(use)
     config = function() require("core.file-explorer").setup() end
   }
 
+  -- indentation
+  use {
+    "lukas-reineke/indent-blankline.nvim",
+    config = function() require("ui.indentation").setup() end
+  }
+
   -- colorscheme
   use {"projekt0n/github-nvim-theme"}
 
