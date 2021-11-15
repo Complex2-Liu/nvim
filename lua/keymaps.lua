@@ -31,7 +31,7 @@ M.keymaps = {
   -- open and close window
   {"n", ",q", ":close<CR>", { noremap = true }},
   {"n", ",v", "<C-w>v",     { noremap = true }},
-  {"n", ",h", "<C-w>s",     { noremap = true }},
+  {"n", ",x", "<C-w>s",     { noremap = true }},
 
   -- better window movement
   {"n", "<C-h>", "<C-w>h", { noremap = true }},
