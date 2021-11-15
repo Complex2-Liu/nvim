@@ -54,8 +54,8 @@ The following keymaps are only available at nvimtree buffer:
 | <kbd>L</kbd> or 右键双击 | cd into the directory |
 | <kbd>o</kbd> or <kbd>CR</kbd> | open a file with default system application or a folder with default file manager |
 | <kbd>j</kbd> and <kbd>k</kbd> | navigate up or down |
-| <kbd>v</kbd> | open the file in a vertical split |
-| <kbd>h</kbd> | open the file in a horizontal split |
+| <kbd>Ctrl</kbd> + <kbd>v</kbd>| open the file in a vertical split |
+| <kbd>Ctrl</kbd> + <kbd>x</kbd> | open the file in a horizontal split |
 | <kbd>Tab</kbd> | open the file as a preview (keeps the cursor in the tree) |
 | <kbd>P</kbd> | 光标聚焦于 parent node |
 | <kbd>q</kbd> | close current opened directory or, if no such directory, behave as <kbd>P</kbd>

@@ -60,8 +60,8 @@ M.setup_options.view.mappings.list = {
   { key = {"L", "<2-RightMouse>"},   cb = tree_cb("cd")   },
   { key = {"o", "<CR>"},             cb = tree_cb("system_open") },
 
-  { key = "v",                       cb = tree_cb("vsplit") },
-  { key = "h",                       cb = tree_cb("split")  },
+  { key = "<C-v>",                   cb = tree_cb("vsplit") },
+  { key = "<C-x>",                   cb = tree_cb("split")  },
   { key = "<Tab>",                   cb = tree_cb("preview") },
 
   { key = "P",                       cb = tree_cb("parent_node") },
