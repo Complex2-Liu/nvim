@@ -60,7 +60,7 @@ The following keymaps are only available at nvimtree buffer:
 | <kbd>P</kbd> | 光标聚焦于 parent node |
 | <kbd>q</kbd> | close current opened directory or, if no such directory, behave as <kbd>P</kbd>
 | <kbd>R</kbd> | refresh the tree |
-| <kbd>-</kbd> | 很难描述, 你试了就知道 |
+| <kbd>h</kbd> | 很难描述, 你试了就知道 |
 | <kbd>y</kbd> | copy file name |
 | <kbd>Y</kbd> | copy relative path |
 | <kbd>gy</kbd> | copy absolute path |

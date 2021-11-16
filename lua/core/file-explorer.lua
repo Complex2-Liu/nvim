@@ -42,6 +42,7 @@ M.options = {
 
 M.setup_options = {
   auto_close = true, -- auto close when nvim-tree is the last window
+  hijack_cursor = true, -- keeps the cursor on the first letter of the filename when moving in the tree
   view = {
     mappings = {
       custom_only = true, -- don't use the default mappings, use the provided user mappings defined below
@@ -81,7 +82,7 @@ M.setup_options.view.mappings.list = {
   { key = "P",                       cb = tree_cb("parent_node") },
   { key = "q",                       cb = tree_cb("close_node") },
   { key = "R",                       cb = tree_cb("refresh") },
-  { key = "-",                       cb = tree_cb("dir_up") },
+  { key = "h",                       cb = tree_cb("dir_up") },
 
   { key = "y",                       cb = tree_cb("copy_name") },
   { key = "Y",                       cb = tree_cb("copy_path") },
