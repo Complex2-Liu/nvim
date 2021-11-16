@@ -2,6 +2,7 @@ local M = {}
 
 -- These options must be set BEFORE calling `require('nvim-tree')`
 M.options = {
+  width = 30,
   git_hl = 1, -- enable file highlight for git attributes
   indent_markers = 1, -- show indent markers when folders are open
   add_trailing = 1, -- append a trailing slash to folder names
@@ -48,9 +49,22 @@ M.setup_options = {
   },
 }
 
+-- integration with bufferline plugin
+-- see https://github.com/romgrk/barbar.nvim/issues/177
+M.toggle = function()
+  local tree = require("nvim-tree")
+  tree.toggle()
+  if require("nvim-tree.view").win_open() then
+    require("bufferline.state").set_offset(M.options.width + 1, "")
+    tree.find_file(true)
+  else
+    require("bufferline.state").set_offset(0)
+  end
+end
+
 -- global keymaps
 M.keymaps = {
-  {"n", "<F1>", ":NvimTreeToggle<CR>", { noremap = true }},
+  {"n", "<F1>", [[:lua require("core.file-explorer").toggle()<CR>]], { noremap = true, silent = true }},
 }
 -- provided user mappings, these keymaps only available at nvimtree buffer
 -- ref: https://github.com/kyazdani42/nvim-tree.lua#user-content-keybindings
