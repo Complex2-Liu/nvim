@@ -20,6 +20,13 @@ return require('packer').startup(function(use)
     config = function() require("core.file-explorer").setup() end
   }
 
+  -- Bufferline
+  use {
+    "romgrk/barbar.nvim",
+    event = "BufWinEnter", -- lazyload on "BufWinEnter" event, see: https://neovim.io/doc/user/autocmd.html#BufWinEnter
+    config = function() require("ui.bufferline").setup() end
+  }
+
   -- indentation
   use {
     "lukas-reineke/indent-blankline.nvim",
