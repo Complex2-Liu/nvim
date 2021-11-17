@@ -39,6 +39,13 @@ return require('packer').startup(function(use)
     config = function() require("core.autocompletion").setup() end
   }
 
+  -- latex
+  use {
+    "lervag/vimtex",
+    ft = { "tex", "latex" },
+    config = function() require("misc.vimtex").setup() end
+  }
+
   -- Bufferline
   use {
     "romgrk/barbar.nvim",
