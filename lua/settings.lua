@@ -8,6 +8,8 @@ M.options = {
   mouse = "a", -- enable mouse support for all mode
   cursorline = true, -- highlight the current line
   termguicolors = true, -- enable gui color (24-bit RGB) in your terminal (some terminal doesn't support this, like macos default terminal)
+  cmdheight = 2, -- number of screen lines to use for the command-line
+  completeopt = { "menuone", "noselect" },
 
   -- see `:help title`
   title = true,

@@ -25,6 +25,20 @@ return require('packer').startup(function(use)
     config = function() require("lsp.config").setup() end
   }
 
+  -- Autocompletion
+  use {
+    "hrsh7th/nvim-cmp", -- completion ENGINE plugin, sources are installed as dependencies, 然后再加载这些 source
+    requires = {
+      "hrsh7th/cmp-buffer", -- source for buffer words
+      "hrsh7th/cmp-nvim-lsp", -- source for neovim builtin LSP client
+      "hrsh7th/cmp-path", -- source for filesystem paths
+      "hrsh7th/cmp-nvim-lua", -- source for neovim Lua API
+      "saadparwaiz1/cmp_luasnip", -- source for luasnip
+      "L3MON4D3/LuaSnip", -- luasnip engine
+    },
+    config = function() require("core.autocompletion").setup() end
+  }
+
   -- Bufferline
   use {
     "romgrk/barbar.nvim",
