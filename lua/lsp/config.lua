@@ -6,6 +6,14 @@ M.servers = {
   "bashls", -- bash
 }
 
+-- see https://github.com/neovim/nvim-lspconfig/wiki/UI-customization#change-diagnostic-symbols-in-the-sign-column-gutter
+M.diagnostic_symbol = {
+  { name = "LspDiagnosticsSignError", icon = " " },
+  { name = "LspDiagnosticsSignWarning", icon = " " },
+  { name = "LspDiagnosticsSignHint", icon = " " },
+  { name = "LspDiagnosticsSignInformation", icon = " " },
+}
+
 -- use an on_attach function to only map the following keys
 -- after the language server attaches to the current buffer
 M.on_attach = function(client, bufnr)
@@ -23,12 +31,17 @@ M.on_attach = function(client, bufnr)
 end
 
 M.setup = function()
--- use a loop to conveniently call 'setup' on multiple servers and
--- map buffer local keybindings when the language server attaches
+  -- use a loop to conveniently call 'setup' on multiple servers and
+  -- map buffer local keybindings when the language server attaches
   for _, lsp in ipairs(M.servers) do
     require("lspconfig")[lsp].setup({
       on_attach = M.on_attach,
     })
+  end
+
+  -- change diagnostic symbols in the sign column
+  for _, sign in ipairs(M.diagnostic_symbol) do
+    vim.fn.sign_define(sign.name, { text = sign.icon, texthl = sign.name, numhl = sign.name })
   end
 end
 
