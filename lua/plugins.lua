@@ -20,6 +20,11 @@ return require('packer').startup(function(use)
     config = function() require("core.file-explorer").setup() end
   }
 
+  use {
+    "neovim/nvim-lspconfig",
+    config = function() require("lsp.config").setup() end
+  }
+
   -- Bufferline
   use {
     "romgrk/barbar.nvim",
