@@ -30,12 +30,22 @@ M.common_on_attach = function(client, bufnr)
   buf_set_keymap('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', opts) -- go to implementation
 end
 
+-- add additional capabilities supported by nvim-cmp
+M.common_capabilities = function()
+  local capabilities = vim.lsp.protocol.make_client_capabilities()
+  capabilities = require("cmp_nvim_lsp").update_capabilities(capabilities)
+
+  return capabilities
+end
+
 M.setup = function()
   -- use a loop to conveniently call 'setup' on multiple servers and
   -- map buffer local keybindings when the language server attaches
   for _, lsp in ipairs(M.servers) do
     require("lspconfig")[lsp].setup({
       on_attach = M.common_on_attach,
+      -- enable some language servers with the additional completion capabilities offered by nvim-cmp
+      capabilities = M.common_capabilities()
     })
   end
 
