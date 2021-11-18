@@ -71,3 +71,13 @@ The following keymaps are only available at nvimtree buffer:
 | <kbd>d</kbd> | delete a file |
 | <kbd>r</kbd> | rename a file |
 | <kbd>H</kbd> | toggle visibility of dotfiles | |
+
+### Gitsigns
+
+[gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim).
+This plugin shows a git diff in the sign column. It shows which lines have been added, modified, or removed.
+It also provides two keymaps which help you jump to the next/previous hunk:
+| key | function |
+| --- | -------- |
+| <kbd>[c</kbd> | Jump to the previous hunk |
+| <kbd>]c</kbd> | Jump to the next hunk |
