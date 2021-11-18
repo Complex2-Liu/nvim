@@ -16,7 +16,7 @@ M.diagnostic_symbol = {
 
 -- use an on_attach function to only map the following keys
 -- after the language server attaches to the current buffer
-M.on_attach = function(client, bufnr)
+M.common_on_attach = function(client, bufnr)
   local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
   local function buf_set_option(...) vim.api.nvim_buf_set_option(bufnr, ...) end
 
@@ -35,7 +35,7 @@ M.setup = function()
   -- map buffer local keybindings when the language server attaches
   for _, lsp in ipairs(M.servers) do
     require("lspconfig")[lsp].setup({
-      on_attach = M.on_attach,
+      on_attach = M.common_on_attach,
     })
   end
 
