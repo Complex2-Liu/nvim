@@ -39,6 +39,16 @@ return require('packer').startup(function(use)
     config = function() require("core.autocompletion").setup() end
   }
 
+  -- gitsigns
+  use {
+    "lewis6991/gitsigns.nvim",
+    event = "BufRead", -- lazyload on "BufRead" event, see `h: BufRead`
+    requires = {
+      "nvim-lua/plenary.nvim",
+    },
+    config = function() require("core.gitsigns").setup() end
+  }
+
   -- latex
   use {
     "lervag/vimtex",
