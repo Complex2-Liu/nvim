@@ -63,6 +63,12 @@ return require('packer').startup(function(use)
     config = function() require("ui.bufferline").setup() end
   }
 
+  -- statusline
+  use {
+    "nvim-lualine/lualine.nvim",
+    config = function() require("ui.statusline").setup() end
+  }
+
   -- indentation
   use {
     "lukas-reineke/indent-blankline.nvim",

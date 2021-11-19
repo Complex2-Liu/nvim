@@ -9,6 +9,7 @@ M.options = {
   cursorline = true, -- highlight the current line
   termguicolors = true, -- enable gui color (24-bit RGB) in your terminal (some terminal doesn't support this, like macos default terminal)
   cmdheight = 2, -- number of screen lines to use for the command-line
+  showmode = false, -- we don't need to see things like -- INSERT -- anymore
   completeopt = { "menuone", "noselect" },
 
   -- see `:help title`
