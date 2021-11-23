@@ -1,10 +1,25 @@
 local M = {}
+local actions = require("telescope.actions")
 
 M.keymaps = {
+  -- Telescope builtin pickers
+  -- file picker
   {"n", "<Leader>ff", [[<cmd>lua require('telescope.builtin').find_files()<cr>]], { noremap = true, }},
   {"n", "<Leader>fg", [[<cmd>lua require('telescope.builtin').live_grep()<cr>]],  { noremap = true, }},
-  {"n", "<Leader>fb", [[<cmd>lua require('telescope.builtin').buffers()<cr>]],    { noremap = true, }},
-  {"n", "<Leader>fh", [[<cmd>lua require('telescope.builtin').help_tags()<cr>]],  { noremap = true, }},
+
+  -- vim picker
+  {"n", "<Leader>vb", [[<cmd>lua require('telescope.builtin').buffers()<cr>]],                   { noremap = true, }},
+  {"n", "<Leader>vr", [[<cmd>lua require('telescope.builtin').registers()<cr>]],                 { noremap = true, }},
+  {"n", "<Leader>vk", [[<cmd>lua require('telescope.builtin').keymaps()<cr>]],                   { noremap = true, }},
+  {"n", "<Leader>vf", [[<cmd>lua require('telescope.builtin').current_buffer_fuzzy_find()<cr>]], { noremap = true, }},
+
+  -- lsp picker
+  {"n", "<Leader>ld", [[<cmd>lua require('telescope.builtin').lsp_definitions()<cr>]], { noremap = true, }},
+
+  -- lists picker
+  {"n", "<Leader>t", [[<cmd>lua require('telescope.builtin').builtin()<cr>]], { noremap = true, }},
+}
+
 M.options = {
   defaults = {
     prompt_prefix = "🔭 ", -- the character(s) that will be shown in front of Telescope's prompt
