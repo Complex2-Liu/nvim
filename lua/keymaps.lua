@@ -44,6 +44,11 @@ M.keymaps = {
   {"n", "<C-Down>",  ":resize -2<CR>",          { noremap = true }},
   {"n", "<C-Left>",  ":vertical resize -2<CR>", { noremap = true }},
   {"n", "<C-Right>", ":vertical resize +2<CR>", { noremap = true }},
+
+  -- quickfix
+  {"n", "]q",    ":cnext<CR>",                                              { noremap = true }},
+  {"n", "[q",    ":cprev<CR>",                                              { noremap = true }},
+  {"n", "<C-q>", '<cmd>lua require("utils.quickfix").QuickFixToggle()<CR>', { noremap = true }},
 }
 
 M.set_keymaps = function(tab)
