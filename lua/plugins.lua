@@ -25,6 +25,23 @@ return require('packer').startup(function(use)
     config = function() require("lsp.config").setup() end
   }
 
+  -- Telescope
+  -- also depends on
+  -- (1) [ripgrep](https://github.com/BurntSushi/ripgrep)
+  -- (2) [fd](https://github.com/sharkdp/fd)
+  use {
+    "nvim-telescope/telescope.nvim",
+    requires = {
+      "nvim-lua/plenary.nvim",
+      {
+        "nvim-telescope/telescope-fzf-native.nvim",
+        run = "make",
+      },
+      "kyazdani42/nvim-web-devicons",
+    },
+    config = function() require("core.telescope").setup() end
+  }
+
   -- Autocompletion
   use {
     "hrsh7th/nvim-cmp", -- completion ENGINE plugin, sources are installed as dependencies, 然后再加载这些 source
