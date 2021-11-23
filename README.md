@@ -45,32 +45,32 @@ running the `require("nvim-tree").setup` function (which load entries inside `M.
 
 | key | function |
 | --- | -------- |
-| <kbd>F1</kbd> | toggle file explorer immediately |
+| `F1` | toggle file explorer immediately |
 
 The following keymaps are only available at nvimtree buffer:
 | key | function |
 | --- | -------- |
-| <kbd>l</kbd> or 左键双击 | edit the file |
-| <kbd>L</kbd> or 右键双击 | cd into the directory |
-| <kbd>o</kbd> or <kbd>CR</kbd> | open a file with default system application or a folder with default file manager |
-| <kbd>j</kbd> and <kbd>k</kbd> | navigate up or down |
-| <kbd>Ctrl</kbd> + <kbd>v</kbd>| open the file in a vertical split |
-| <kbd>Ctrl</kbd> + <kbd>x</kbd> | open the file in a horizontal split |
-| <kbd>Tab</kbd> | open the file as a preview (keeps the cursor in the tree) |
-| <kbd>P</kbd> | 光标聚焦于 parent node |
-| <kbd>q</kbd> | close current opened directory or, if no such directory, behave as <kbd>P</kbd>
-| <kbd>R</kbd> | refresh the tree |
-| <kbd>h</kbd> | 很难描述, 你试了就知道 |
-| <kbd>y</kbd> | copy file name |
-| <kbd>Y</kbd> | copy relative path |
-| <kbd>gy</kbd> | copy absolute path |
-| <kbd>p</kbd> | paste from clipboard |
-| <kbd>x</kbd> | add/remove file/directory to cut clipboard |
-| <kbd>c</kbd> | add/remove file/directory to copy clipboard |
-| <kbd>a</kbd> | add a file or directory if leaving a `/` at the end of the path |
-| <kbd>d</kbd> | delete a file |
-| <kbd>r</kbd> | rename a file |
-| <kbd>H</kbd> | toggle visibility of dotfiles | |
+| `l` or 左键双击 | edit the file |
+| `L` or 右键双击 | cd into the directory |
+| `o` or `CR` | open a file with default system application or a folder with default file manager |
+| `j` and `k` | navigate up or down |
+| `Ctrl` + `v`| open the file in a vertical split |
+| `Ctrl` + `x` | open the file in a horizontal split |
+| `Tab` | open the file as a preview (keeps the cursor in the tree) |
+| `P` | 光标聚焦于 parent node |
+| `q` | close current opened directory or, if no such directory, behave as `P`
+| `R` | refresh the tree |
+| `h` | 很难描述, 你试了就知道 |
+| `y` | copy file name |
+| `Y` | copy relative path |
+| `gy` | copy absolute path |
+| `p` | paste from clipboard |
+| `x` | add/remove file/directory to cut clipboard |
+| `c` | add/remove file/directory to copy clipboard |
+| `a` | add a file or directory if leaving a `/` at the end of the path |
+| `d` | delete a file |
+| `r` | rename a file |
+| `H` | toggle visibility of dotfiles | |
 
 ### Gitsigns
 
@@ -79,8 +79,8 @@ This plugin shows a git diff in the sign column. It shows which lines have been 
 It also provides two keymaps which help you jump to the next/previous hunk:
 | key | function |
 | --- | -------- |
-| <kbd>[c</kbd> | Jump to the previous hunk |
-| <kbd>]c</kbd> | Jump to the next hunk |
+| `[c` | Jump to the previous hunk |
+| `]c` | Jump to the next hunk |
 
 ### Telescope
 
