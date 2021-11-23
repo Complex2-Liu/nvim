@@ -35,6 +35,12 @@ M.options = {
       },
     },
   },
+
+  pickers = {
+    find_files = {
+      find_command = { "fd", "--type=file", "--hidden", "--smart-case" },
+    },
+  },
 }
 
 M.setup = function()
