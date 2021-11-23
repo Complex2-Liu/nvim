@@ -65,7 +65,7 @@ end
 
 -- global keymaps
 M.keymaps = {
-  {"n", "<F1>", [[:lua require("core.file-explorer").toggle()<CR>]], { noremap = true, silent = true }},
+  {"n", "<F1>", [[<cmd>lua require("core.file-explorer").toggle()<CR>]], { noremap = true }},
 }
 -- provided user mappings, these keymaps only available at nvimtree buffer
 -- ref: https://github.com/kyazdani42/nvim-tree.lua#user-content-keybindings
