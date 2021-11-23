@@ -81,3 +81,50 @@ It also provides two keymaps which help you jump to the next/previous hunk:
 | --- | -------- |
 | <kbd>[c</kbd> | Jump to the previous hunk |
 | <kbd>]c</kbd> | Jump to the next hunk |
+
+### Telescope
+
+[telescope.nvim](https://github.com/nvim-telescope/telescope.nvim#pickers).
+It is an incredible fuzzy finder built on Neovim's latest feature,
+among all the plugins the most **essential** one!
+
+Two external command line program [rg](https://github.com/BurntSushi/ripgrep)
+and [fd](https://github.com/sharkdp/fd) is required.
+
+Configurations are divided into three part:
+  - `defaults`: This is Global Customization, `mappings` is one of the most important one.
+  - `pickers`: This is Individual Customization, affecting every single picker.
+  - `extensions`: Currently I only load one extension
+  [telescope-fzf-native.nvim](https://github.com/nvim-telescope/telescope-fzf-native.nvim).
+
+#### Keymaps
+
+The following keymaps can be customised in `defaults.mappings`,
+please note that they are only available at telescope floating window:
+
+| key | function |
+| --- | -------- |
+| `<ESC>` | Close telescope |
+| `<Tab>` or `<C-j>` | Next item |
+| `<S-Tab>` or `<C-k>` | Previous ite |
+| `<C-p>` | Toggle selection |
+| `<C-q>` | Smartly send item to quickfix list |
+| `<CR>` | Confirm selection |
+
+check out `smart_send_to_qflist()` in `:h telescope.actions` for meaning of "Smartly send item".
+
+Keymaps call a builtin picker are listed below:
+
+| key | function |
+| --- | -------- |
+| `<Leader>ff` | find_files |
+| `<Leader>fg` | live_grep |
+| `<Leader>vb` | buffers |
+| `<Leader>vr` | registers |
+| `<Leader>vk` | keymaps |
+| `<Leader>vf` | current_buffer_fuzzy_find |
+| `<Leader>ld` | lsp_definitions |
+| `<Leader>t` | builtin | |
+
+Check out [https://github.com/nvim-telescope/telescope.nvim#pickers](https://github.com/nvim-telescope/telescope.nvim#pickers)
+for the meaning of every picker function.
