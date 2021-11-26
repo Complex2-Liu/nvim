@@ -65,6 +65,13 @@ return require('packer').startup(function(use)
     config = function() require("core.autocompletion").setup() end
   }
 
+  -- Terminal
+  use {
+    "akinsho/toggleterm.nvim",
+    event = "BufWinEnter",
+    config = function() require("core.terminal").setup() end
+  }
+
   -- gitsigns
   use {
     "lewis6991/gitsigns.nvim",
