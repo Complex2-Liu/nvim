@@ -79,7 +79,7 @@ return require('packer').startup(function(use)
     requires = {
       "nvim-lua/plenary.nvim",
     },
-    config = function() require("core.gitsigns").setup() end
+    config = function() require("ui.gitsigns").setup() end
   }
 
   -- latex
