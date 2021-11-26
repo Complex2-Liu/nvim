@@ -128,3 +128,16 @@ Keymaps call a builtin picker are listed below:
 
 Check out [https://github.com/nvim-telescope/telescope.nvim#pickers](https://github.com/nvim-telescope/telescope.nvim#pickers)
 for the meaning of every picker function.
+
+### Terminal
+
+[toggleterm](https://github.com/akinsho/toggleterm.nvim).
+This plugin help you toggle terminal during an editing session easily.
+
+#### Keymaps
+
+| key | function |
+| --- | -------- |
+| `<C-t>` | toggle a terminal in horizontal direction |
+| `2<C-t>` | open a terminal with ID 2 |
+| `<Ctrl>` + h/j/k/l | navigate to other window in terminal mode |
