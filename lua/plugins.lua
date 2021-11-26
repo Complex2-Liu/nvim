@@ -29,6 +29,7 @@ return require('packer').startup(function(use)
   -- also depends on
   -- (1) [ripgrep](https://github.com/BurntSushi/ripgrep)
   -- (2) [fd](https://github.com/sharkdp/fd)
+  -- (3) nvim-treesitter below
   use {
     "nvim-telescope/telescope.nvim",
     requires = {
@@ -40,6 +41,14 @@ return require('packer').startup(function(use)
       "kyazdani42/nvim-web-devicons",
     },
     config = function() require("core.telescope").setup() end
+  }
+
+  -- nvim-treesitter
+  use {
+    "nvim-treesitter/nvim-treesitter",
+    branch = "0.5-compat",
+    run = ":TSUpdate",
+    config = function() require("core.treesitter").setup() end
   }
 
   -- Autocompletion
