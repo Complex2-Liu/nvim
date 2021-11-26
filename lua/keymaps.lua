@@ -55,6 +55,10 @@ M.keymaps = {
   {"t", "<C-j>", "<C-\\><C-n><C-w>j", { noremap = true }},
   {"t", "<C-k>", "<C-\\><C-n><C-w>k", { noremap = true }},
   {"t", "<C-l>", "<C-\\><C-n><C-w>l", { noremap = true }},
+
+  -- navigate tab completion with <C-j> and <C-k>
+  {"c", "<C-j>", 'pumvisible() ? "\\<C-n>" : "\\<C-j>"', { noremap = true, expr = true }},
+  {"c", "<C-k>", 'pumvisible() ? "\\<C-p>" : "\\<C-k>"', { noremap = true, expr = true }},
 }
 
 M.set_keymaps = function(tab)
